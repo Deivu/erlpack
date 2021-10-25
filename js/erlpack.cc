@@ -46,6 +46,4 @@ NAN_MODULE_INIT(Init) {
     // target->Set(Nan::New("unpack").ToLocalChecked(), Nan::New<FunctionTemplate>(Unpack)->GetFunction());
 }
 
-NODE_MODULE_INIT() {
-    Init(exports);   
-}
+NAN_MODULE_WORKER_ENABLED(erlpack, Init);
